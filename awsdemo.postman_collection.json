@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "81e136d0-decc-41de-8e01-95a499489062",
+		"name": "awsdemo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "s3-sse-c-put",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/aws/s3/sse_c_put?filename=/tmp/data1.txt&s3BucketName=emr.cuteworld.top&s3Key=sse/sse-c-sample.obj",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"aws",
+						"s3",
+						"sse_c_put"
+					],
+					"query": [
+						{
+							"key": "filename",
+							"value": "/tmp/data1.txt",
+							"description": "文本文件"
+						},
+						{
+							"key": "s3BucketName",
+							"value": "emr.cuteworld.top",
+							"description": "S3存储桶"
+						},
+						{
+							"key": "s3Key",
+							"value": "sse/sse-c-sample.obj",
+							"description": "S3存储文件的路径"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "s3-sse-c-get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/aws/s3/sse_c_get?s3BucketName=emr.cuteworld.top&s3Key=sse/sse-c-sample.obj",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"aws",
+						"s3",
+						"sse_c_get"
+					],
+					"query": [
+						{
+							"key": "s3BucketName",
+							"value": "emr.cuteworld.top"
+						},
+						{
+							"key": "s3Key",
+							"value": "sse/sse-c-sample.obj",
+							"description": "S3存储文件的路径"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

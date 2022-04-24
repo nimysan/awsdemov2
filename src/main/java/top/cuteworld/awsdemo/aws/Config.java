@@ -43,8 +43,6 @@ public class Config {
     public S3Client s3Client(AwsCredentialsProvider awsCredentialsProvider) {
         return S3Client.builder().credentialsProvider(awsCredentialsProvider).region(Region.US_EAST_2).build();
     }
-    git filter-branch --index-filter \
-            'git rm -rf --cached --ignore-unmatch src/main/java/top/cuteworld/awsdemo/aws/Config.java' HEAD
 
     @Bean
     public KmsClient kmsClient(AwsCredentialsProvider awsCredentialsProvider) {
